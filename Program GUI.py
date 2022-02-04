@@ -17,7 +17,7 @@ while True:#Loop
     if event == sg.WINDOW_CLOSED or event == 'Quit':#if detect action from the user to exit
         break#actual stop/exit
     elif event == 'Calc':#User push 'calc' button
-        today = date.today()#Today date
+        today = date.today()
         one_or_zero = ((today.month, today.day) < (int(values['birthmonth']),int(values['birthday'])))#compare and have a one or cero value if the user birthay has passed the current year
         year_difference = today.year - int(values['birthyear'])#calculate the years old 
         age = year_difference - one_or_zero#Discount or not one year 
