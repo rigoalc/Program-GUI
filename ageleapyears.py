@@ -4,7 +4,7 @@
 import PySimpleGUI as sg
 from datetime import date
 
-def age_leap_years():
+def age_leap_years(birthday, birthmonth, birthyear):
 
 
     ABOUT = """This program calculates the age solving the problem of the Leap Years for the birthday count.
@@ -45,5 +45,7 @@ def age_leap_years():
             window['result'].update(result)
             window['status'].update("Done!")
 
-    window.close()  
-age_leap_years()
+    window.close()
+
+if __name__ == '__main__':
+    age_leap_years()
