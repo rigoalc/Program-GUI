@@ -1,2 +1,2 @@
 # Program GUI
- Program to calculate your age discaunting leap year day's
+ Program to calculate your age calculating leap years day's.
