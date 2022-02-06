@@ -6,7 +6,7 @@ ABOUT = """This program calculates the age solving the problem of the Leap Years
 Calculating the age by counting the days from the birthday is incorrect.
 The correct way to calculate this is to subtract the birth year from the current year and then subtract one more year 
 if the current month/day comes before the user's birth month/day.
-s"""
+"""
 
 menu_def = [
             ['&File', ['&Quit']],
