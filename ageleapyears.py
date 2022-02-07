@@ -1,25 +1,27 @@
 
 # Rodrigo Alcover
-# Program Search and Sort due 1/29/2022
-# CIS 226-23199 Advanced Python Programming
-# 8hrs
+# Program GUI 2/7/2022
+# CIS 226-2319/9 Advanced Python Programming
 
-'''Design: How will you solve the problem?
-I will solve this problem installing libraries like PySimpleGUI that willl permit have run a Graphical User Interface.
+
+'''
+Design: How will you solve the problem?
+I will solve this problem by installing libraries like PySimpleGUI that will permit have run a Graphical User Interface.
 And creating a logical function to calculate values and return a result to the user by the GUI interface.
 
 Develop:
-First created a basic version of the prgram. Then add to that features included with the library, 
-and divided the code in functions inside one class.
+First created a basic version of the program. Then add to that features included with the library, 
+and divided the code into functions inside one class.
 
 Test:
-The idea is to test assering a simple calculation using a virtual enviroment runing pytest from the trminal.
+The idea is to test asserting a simple calculation using a virtual environment running pytest from the terminal.
 
 How to use the program:
-Open the program, introduce a day of birth, click button "Calc" to get the age. This program is calculating the leap years for that 
-birthyear, month, and day.
+Open the program, introduce a day of birth, click the button "Calc" to get the age. This program is calculating the leap years for that 
+birth year, month, and day. For more info read "ABOUT" in the help menu of the program. 
 
- '''
+The development time for this assignment is 8hrs
+'''
 
 import PySimpleGUI as sg
 from datetime import date
@@ -61,8 +63,8 @@ class Age:
             elif event == 'Calc':#User push 'calc' button
                 today = date.today()
                 one_or_zero = ((today.month, today.day) < (int(values['birthmonth']),int(values['birthday'])))#compare and have a one or cero value if the user birthay has passed the current year
-                year_difference = today.year - int(values['birthyear'])#calculate the years old 
-                age = year_difference - one_or_zero#Discount or not one year 
+                pre_age = today.year - int(values['birthyear'])#calculate the years old 
+                age = pre_age - one_or_zero#Discount or not one year 
                 result = age#actual age
                 self.window['result'].update(result)
                 self.window['status'].update("Done!")
