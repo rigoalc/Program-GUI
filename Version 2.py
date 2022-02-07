@@ -27,10 +27,10 @@ class Age:
     def run(self):
         """Start the program"""
         # Start the Event Loop
-        self.age_leap_years()
+        self._run_loop()
         # After that is done, close the window
         self.window.close()
-    def age_leap_years(self):
+    def _run_loop(self):
         while True:#Loop
             event, values = self.window.read()#wait
             if event == sg.WINDOW_CLOSED or event == 'Quit':#if detect action from the user to exit
@@ -48,3 +48,7 @@ class Age:
 
 gui = Age()
 gui.run()
+
+
+
+
