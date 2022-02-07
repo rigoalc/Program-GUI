@@ -45,6 +45,8 @@ class Age:
                 result = age#actual age
                 self.window['result'].update(result)
                 self.window['status'].update("Done!")
+if __name__ == '__main__':
 
-gui = Age()
-gui.run()
+    gui = Age()
+    gui.run()
+
